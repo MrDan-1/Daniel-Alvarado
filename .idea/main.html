@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en"> <!-- Root element, English language -->
+
+<head> <!-- Head section, not visible -->
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive on mobile -->
+    <title>Weather App</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Links our CSS file -->
+</head>
+
+<body> <!-- Visible page content -->
+
+<div class="container"> <!-- Main wrapper div -->
+
+    <h1 class="title">Weather App</h1> <!-- App title heading -->
+
+    <!-- Search Section -->
+    <div class="search-box"> <!-- Search bar wrapper -->
+        <input>
+                type="text"
+        id="cityInput" <!-- ID for JavaScript targeting -->
+        class="city-input" <!-- Class for CSS styling -->
+        placeholder="Enter city name..." <!-- Hint text inside input -->
+        />
+        <button id="searchBtn" class="search-btn">Search</button> <!-- Search trigger button -->
+    </div>
+
+    <!-- Weather Display Section -->
+    <div class="weather-card" id="weatherCard"> <!-- Card to show weather -->
+
+        <div class="weather-icon" id="weatherIcon">🌤️</div> <!-- Dynamic weather emoji icon -->
+
+        <h2 class="city-name" id="cityName">City Name</h2> <!-- Displays searched city -->
+
+        <p class="temperature" id="temperature">--°F</p> <!-- Shows temperature -->
+
+        <p class="condition" id="condition">Condition</p> <!-- Shows weather condition -->
+
+        <p class="humidity" id="humidity">Humidity: --%</p> <!-- Shows humidity percent -->
+
+        <p class="wind" id="wind">Wind: -- mph</p> <!-- Shows wind speed -->
+
+    </div> <!-- End weather card -->
+
+    <!-- Error Message -->
+    <p class="error-msg" id="errorMsg"></p> <!-- Shows error if city not found -->
+
+</div> <!-- End container -->
+
+<script src="app.js"></script> <!-- Links our JavaScript file -->
+
+</body> <!-- End body -->
+
+</html> <!-- End HTML document -->

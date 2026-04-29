@@ -1,0 +1,129 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Loads Poppins font */
+
+/* Reset & Base */
+* { /* Targets every element */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+body { /* Styles the whole page */
+    font-family: 'Poppins', sans-serif; /* Sets main font */
+    background: #1a1a2e; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    min-height: 100vh; /* Full screen height */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+/* Main Container */
+.container { /* Centers all content */
+    width: 100%; /* Full available width */
+    max-width: 420px; /* Max width limit */
+    padding: 20px; /* Inner spacing */
+    text-align: center; /* Centers text */
+}
+
+/* App Title */
+.title { /* Styles the heading */
+    font-size: 2rem; /* Large font size */
+    font-weight: 600; /* Bold text */
+    margin-bottom: 24px; /* Space below title */
+    color: #e0e0e0; /* Light gray color */
+    letter-spacing: 1px; /* Slight letter spacing */
+}
+
+/* Search Box */
+.search-box { /* Wraps input and button */
+    display: flex; /* Side by side layout */
+    gap: 8px; /* Space between elements */
+    margin-bottom: 24px; /* Space below search box */
+}
+
+.city-input { /* Styles the text input */
+    flex: 1; /* Takes remaining space */
+    padding: 12px 16px; /* Inner spacing */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Rounded corners */
+    background: #16213e; /* Dark input background */
+    color: #ffffff; /* White typed text */
+    font-size: 1rem; /* Normal font size */
+    outline: none; /* Removes focus outline */
+}
+
+.city-input::placeholder { /* Styles placeholder text */
+    color: #888888; /* Gray placeholder color */
+}
+
+.search-btn { /* Styles the search button */
+    padding: 12px 20px; /* Inner spacing */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Rounded corners */
+    background: #0f3460; /* Dark blue button */
+    color: #ffffff; /* White button text */
+    font-size: 1rem; /* Normal font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background 0.3s; /* Smooth color change */
+}
+
+.search-btn:hover { /* Button hover effect */
+    background: #e94560; /* Red on hover */
+}
+
+/* Weather Card */
+.weather-card { /* Styles the weather display */
+    background: #16213e; /* Dark card background */
+    border-radius: 16px; /* Rounded card corners */
+    padding: 30px 20px; /* Inner spacing */
+    display: none; /* Hidden until search */
+}
+
+.weather-card.show { /* Shows card when active */
+    display: block; /* Makes card visible */
+}
+
+/* Weather Icon */
+.weather-icon { /* Styles the emoji icon */
+    font-size: 4rem; /* Large icon size */
+    margin-bottom: 12px; /* Space below icon */
+}
+
+/* City Name */
+.city-name { /* Styles city display */
+    font-size: 1.6rem; /* Medium-large size */
+    font-weight: 600; /* Bold text */
+    margin-bottom: 8px; /* Space below name */
+}
+
+/* Temperature */
+.temperature { /* Styles temperature text */
+    font-size: 3rem; /* Very large number */
+    font-weight: 300; /* Light font weight */
+    margin-bottom: 8px; /* Space below temp */
+    color: #e94560; /* Red accent color */
+}
+
+/* Weather Condition */
+.condition { /* Styles condition text */
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #aaaaaa; /* Gray color */
+    margin-bottom: 16px; /* Space below condition */
+    text-transform: capitalize; /* Capitalizes first letter */
+}
+
+/* Humidity & Wind */
+.humidity, /* Styles humidity text */
+.wind { /* Styles wind text */
+    font-size: 0.95rem; /* Slightly smaller text */
+    color: #cccccc; /* Light gray color */
+    margin-bottom: 6px; /* Small space below */
+}
+
+/* Error Message */
+.error-msg { /* Styles error text */
+    color: #e94560; /* Red error color */
+    font-size: 0.95rem; /* Normal font size */
+    margin-top: 12px; /* Space above error */
+}
