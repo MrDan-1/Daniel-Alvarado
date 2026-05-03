@@ -1,6 +1,6 @@
 // Weather App JavaScript
 
-const apiKey = "343520886712861a9af7acb14decb15f"; // Replace with your API key
+const apiKey = ""; //API key
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather"; // Current weather URL
 const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast"; // 5 day forecast URL
 
