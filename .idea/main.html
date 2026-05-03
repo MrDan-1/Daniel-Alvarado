@@ -20,22 +20,26 @@
         <button id="searchBtn" class="search-btn">Search</button> <!-- Search trigger button -->
     </div>
 
-    <!-- Weather Display Section -->
-    <div class="weather-card" id="weatherCard"> <!-- Card to show weather -->
+    <!-- Weather Layout Side by Side -->
+    <div class="weather-layout"> <!-- Wrapper for side by side -->
 
-        <div class="weather-icon" id="weatherIcon">🌤️</div> <!-- Dynamic weather emoji icon -->
+        <!-- Weather Display Section -->
+        <div class="weather-card" id="weatherCard"> <!-- Card to show weather -->
+            <div class="weather-icon" id="weatherIcon">🌤️</div> <!-- Dynamic weather emoji icon -->
+            <h2 class="city-name" id="cityName">City Name</h2> <!-- Displays searched city -->
+            <p class="temperature" id="temperature">--°F</p> <!-- Shows temperature -->
+            <p class="condition" id="condition">Condition</p> <!-- Shows weather condition -->
+            <p class="humidity" id="humidity">Humidity: --%</p> <!-- Shows humidity percent -->
+            <p class="wind" id="wind">Wind: -- mph</p> <!-- Shows wind speed -->
+        </div> <!-- End weather card -->
 
-        <h2 class="city-name" id="cityName">City Name</h2> <!-- Displays searched city -->
+        <!-- 5 Day Forecast Section -->
+        <div class="forecast-container" id="forecastContainer"> <!-- Forecast wrapper -->
+            <h3 class="forecast-title">5-Day Forecast</h3> <!-- Forecast heading -->
+            <div class="forecast-cards" id="forecastCards"></div> <!-- Forecast cards go here -->
+        </div> <!-- End forecast container -->
 
-        <p class="temperature" id="temperature">--°F</p> <!-- Shows temperature -->
-
-        <p class="condition" id="condition">Condition</p> <!-- Shows weather condition -->
-
-        <p class="humidity" id="humidity">Humidity: --%</p> <!-- Shows humidity percent -->
-
-        <p class="wind" id="wind">Wind: -- mph</p> <!-- Shows wind speed -->
-
-    </div> <!-- End weather card -->
+    </div> <!-- End weather layout -->
 
     <!-- Error Message -->
     <p class="error-msg" id="errorMsg"></p> <!-- Shows error if city not found -->

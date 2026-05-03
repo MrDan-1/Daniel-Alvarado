@@ -10,18 +10,37 @@
 
 body { /* Styles the whole page */
     font-family: 'Poppins', sans-serif; /* Sets main font */
-    background: #1a1a2e; /* Dark blue background */
+    background: #1a1a2e; /* Default dark background */
     color: #ffffff; /* White text color */
     min-height: 100vh; /* Full screen height */
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
+    transition: background 0.5s ease; /* Smooth background change */
+}
+
+/* Sunny Background */
+body.sunny { /* Applied when sunny */
+    background: #f9e04b; /* Light yellow background */
+    color: #1a1a2e; /* Dark text for contrast */
+}
+
+/* Cloudy or Rainy Background */
+body.cloudy { /* Applied when cloudy or rainy */
+    background: #b0b0b0; /* Light grey background */
+    color: #1a1a2e; /* Dark text for contrast */
+}
+
+/* Night Background */
+body.night { /* Applied when night time */
+    background: #2d0060; /* Dark purple background */
+    color: #ffffff; /* White text for contrast */
 }
 
 /* Main Container */
 .container { /* Centers all content */
     width: 100%; /* Full available width */
-    max-width: 420px; /* Max width limit */
+    max-width: 900px; /* Wider to fit side by side */
     padding: 20px; /* Inner spacing */
     text-align: center; /* Centers text */
 }
@@ -31,7 +50,6 @@ body { /* Styles the whole page */
     font-size: 2rem; /* Large font size */
     font-weight: 600; /* Bold text */
     margin-bottom: 24px; /* Space below title */
-    color: #e0e0e0; /* Light gray color */
     letter-spacing: 1px; /* Slight letter spacing */
 }
 
@@ -40,6 +58,9 @@ body { /* Styles the whole page */
     display: flex; /* Side by side layout */
     gap: 8px; /* Space between elements */
     margin-bottom: 24px; /* Space below search box */
+    max-width: 420px; /* Limits search box width */
+    margin-left: auto; /* Centers search box */
+    margin-right: auto; /* Centers search box */
 }
 
 .city-input { /* Styles the text input */
@@ -72,12 +93,22 @@ body { /* Styles the whole page */
     background: #e94560; /* Red on hover */
 }
 
-/* Weather Card */
+/* Weather Layout - Side by Side */
+.weather-layout { /* Wrapper for side by side */
+    display: flex; /* Enables side by side */
+    gap: 20px; /* Space between sides */
+    align-items: flex-start; /* Aligns cards to top */
+    justify-content: center; /* Centers the layout */
+}
+
+/* Weather Card - Left Side */
 .weather-card { /* Styles the weather display */
     background: #16213e; /* Dark card background */
     border-radius: 16px; /* Rounded card corners */
     padding: 30px 20px; /* Inner spacing */
     display: none; /* Hidden until search */
+    flex: 1; /* Takes equal space */
+    max-width: 420px; /* Limits card width */
 }
 
 .weather-card.show { /* Shows card when active */
@@ -119,6 +150,54 @@ body { /* Styles the whole page */
     font-size: 0.95rem; /* Slightly smaller text */
     color: #cccccc; /* Light gray color */
     margin-bottom: 6px; /* Small space below */
+}
+
+/* Forecast Container - Right Side */
+.forecast-container { /* Wraps the forecast section */
+    display: none; /* Hidden until search */
+    flex: 1; /* Takes equal space */
+    max-width: 420px; /* Limits forecast width */
+}
+
+.forecast-container.show { /* Shows forecast when active */
+    display: block; /* Makes forecast visible */
+}
+
+/* Forecast Title */
+.forecast-title { /* Styles forecast heading */
+    font-size: 1.2rem; /* Medium font size */
+    margin-bottom: 12px; /* Space below title */
+}
+
+/* Forecast Cards Row */
+.forecast-cards { /* Wraps all forecast cards */
+    display: flex; /* Side by side layout */
+    flex-direction: column; /* Stacks cards vertically */
+    gap: 8px; /* Space between cards */
+}
+
+/* Individual Forecast Card */
+.forecast-card { /* Styles each day card */
+    background: #16213e; /* Dark card background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 12px 16px; /* Inner spacing */
+    display: flex; /* Side by side content */
+    justify-content: space-between; /* Spreads content out */
+    align-items: center; /* Vertically centers content */
+}
+
+.forecast-day { /* Styles the day label */
+    font-size: 0.95rem; /* Small font size */
+    color: #aaaaaa; /* Gray color */
+}
+
+.forecast-icon { /* Styles forecast emoji */
+    font-size: 1.5rem; /* Medium icon size */
+}
+
+.forecast-temp { /* Styles forecast temperature */
+    font-size: 0.95rem; /* Small font size */
+    color: #e94560; /* Red accent color */
 }
 
 /* Error Message */
